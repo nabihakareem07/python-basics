@@ -1,0 +1,6 @@
+n = int(input("Enter n: "))
+k = int(input("Enter k: "))
+if n & (1 << k):
+    print("K-th bit is SET")
+else:
+    print("K-th bit is NOT SET")
