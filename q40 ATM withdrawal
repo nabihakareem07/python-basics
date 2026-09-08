@@ -1,0 +1,13 @@
+balance = float(input("Enter account balance: "))
+amount = float(input("Enter withdrawal amount: "))
+
+if amount <= 0:
+    print("Invalid withdrawal amount")
+elif amount > balance:
+    print("Withdrawal rejected: Insufficient balance")
+elif balance - amount < 500:
+    print("Withdrawal rejected: Minimum balance must be maintained")
+else:
+    balance = balance - amount
+    print("Withdrawal approved")
+    print("Remaining balance =", balance)

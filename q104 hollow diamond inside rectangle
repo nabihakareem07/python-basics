@@ -1,0 +1,23 @@
+rows = int(input("Enter number of rows: "))
+columns = int(input("Enter number of columns: "))
+
+mid = columns // 2
+
+for i in range(rows):
+    for j in range(columns):
+
+        # Rectangle border
+        if i == 0 or i == rows - 1 or j == 0 or j == columns - 1:
+            print("*", end="")
+
+        # Hollow diamond
+        elif abs(j - mid) == i - 1:
+            print("*", end="")
+
+        elif abs(j - mid) == rows - i - 2:
+            print("*", end="")
+
+        else:
+            print(" ", end="")
+
+    print()
